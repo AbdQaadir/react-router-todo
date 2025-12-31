@@ -10,7 +10,7 @@ import TodoForm from "~/components/TodoForm";
 import ConfirmDelete from "~/components/ConfirmDelete";
 import { useAuth } from "@clerk/react-router";
 
-const API_ROUTE = "http://localhost:3001";
+const API_ROUTE = import.meta.env.VITE_API_URL;
 
 export async function loader(args: Route.LoaderArgs) {
   // Use `getAuth()` to access `isAuthenticated` and the user's ID
